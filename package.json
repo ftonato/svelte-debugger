@@ -1,6 +1,6 @@
 {
   "name": "svelte-debugger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A <Debugger> component for Svelte apps",
   "svelte": "Debugger.svelte",
   "browser": "dist/svelte-debugger.js",

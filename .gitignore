@@ -107,7 +107,7 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-# Dist files
-dist/
+# Distributions
+/dist
 
 # End of https://www.gitignore.io/api/node,code,linux
