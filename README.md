@@ -6,6 +6,8 @@
 
 A debugger component for [Svelte][svelte] apps.
 
+![](debugger.png)
+
 ## Installation
 
 ```bash
