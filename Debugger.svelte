@@ -24,15 +24,11 @@
   const validateProp = prop => {
     if (typeof prop === "object") {
       return !!Object.keys(prop).length;
-    }
-
-    if (typeof prop === "boolean") {
-      return prop;
-    }
-
-    if (typeof prop === "number") {
+    } else if (typeof prop === "number") {
       return prop > 0;
     }
+
+    throw new Error("ValidateProp param expected to be an object");
   };
 
   const init = () => {

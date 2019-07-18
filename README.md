@@ -1,10 +1,10 @@
-# svelte-debugger
+# svelte-debugger ([demo 🚀](https://svelte.dev/repl/fbd4c72596ef48a588edfcbbbad64893?version=3.6.7))
 
 [![npm][badge-version]][npm]
 [![bundle size][badge-size]][bundlephobia]
 [![license][badge-license]][license]
 
-A debugger component for [Svelte][svelte] apps.
+A _JSON_ debugger component for [Svelte][svelte] apps.
 
 ![](debugger.png)
 
@@ -40,9 +40,15 @@ yarn add svelte-debugger
 />
 ```
 
-- `data`: object to debug
-- `indent`: `number` size of spaces between _keys_ and _values_
-- `colorOptions`: `object` containing at least one of the properties `keyColor`, `numberColor`, `stringColor`, `trueColor`, `falseColor`, `nullColor`.
+## Parameters
+
+The following parameters are available:
+
+| parameter | default   | description                                                                                                                                                                                                         |
+|-----------|-----------|---------------------------------------------------------------------------------------------------------------------|
+| data       | {}         | The non-formated _object_ to debug                |
+| indent    | 2         | The size number of spaces between _keys_ and _values_ |
+| colorOptions | {}       | An object that describes the individual color of each property (`keyColor`, `numberColor`, `stringColor`, `trueColor`, `falseColor`, `nullColor`) from our _data_ object |
 
 [svelte]: https://svelte.dev/
 [badge-version]: https://img.shields.io/npm/v/svelte-debugger.svg
