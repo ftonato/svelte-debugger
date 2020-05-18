@@ -35,9 +35,7 @@
     isPropsValid = validateProp(data) && validateProp(indent);
   };
 
-  const getFormatted = () => {
-    return formatHighlight(JSON.stringify(data, null, indent), colorOptions);
-  };
+  $: formattedHighlight = formatHighlight(JSON.stringify(data, null, indent), colorOptions);
 </script>
 
 <style>
@@ -65,7 +63,7 @@
 {#if isPropsValid}
   <pre>
     <code>
-      {@html getFormatted()}
+      {@html formattedHighlight}
     </code>
   </pre>
 {/if}
