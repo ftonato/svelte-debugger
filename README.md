@@ -4,27 +4,44 @@
 [![bundle size][badge-size]][bundlephobia]
 [![license][badge-license]][license]
 
-A _JSON_ debugger component for [Svelte][svelte] apps.
+A **_JSON debugger_** component for [Svelte][svelte] apps.
 
-![](debugger.png)
+![Svelte Debugger](debugger.png)
 
 ## Installation
 
-```bash
+Install with [npm](https://www.npmjs.com/):
+```sh
 npm install svelte-debugger --save
 ```
 
-or
-
-```bash
+install with [yarn](https://yarnpkg.com/):
+```sh
 yarn add svelte-debugger
 ```
+----
 
 ## Usage
 
 ```html
 <script>
   import Debugger from 'svelte-debugger';
+
+  // This variable is used for the example below
+  const example = {
+    "id": 1,
+    "name": "Leanne Graham",
+      "address": {
+        "street": "Kulas Light",
+        "zipcode": 92998,
+        "timezone": null
+      },
+      "company": {
+        "name": "Romaguera-Crona",
+        "registered": false,
+        "daylightSaving": true,
+      }
+    };
 </script>
 
 <Debugger data={example} />
@@ -44,11 +61,11 @@ yarn add svelte-debugger
 
 The following parameters are available:
 
-| parameter | default   | description                                                                                                                                                                                                         |
-|-----------|-----------|---------------------------------------------------------------------------------------------------------------------|
-| data       | {}         | The non-formated _object_ to debug                |
-| indent    | 2         | The size number of spaces between _keys_ and _values_ |
-| colorOptions | {}       | An object that describes the individual color of each property (`keyColor`, `numberColor`, `stringColor`, `trueColor`, `falseColor`, `nullColor`) from our _data_ object |
+| parameter    | default | description                                                                                                                                                              |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| data         | {}      | The non-formated *object* to format                                                                                                                                       |
+| indent       | 2       | The size number of spaces between *keys* and *values*                                                                                                                    |
+| colorOptions | {}      | An object that describes the individual color of each property (`keyColor`, `numberColor`, `stringColor`, `trueColor`, `falseColor`, `nullColor`) from our *data* object |
 
 [svelte]: https://svelte.dev/
 [badge-version]: https://img.shields.io/npm/v/svelte-debugger.svg
